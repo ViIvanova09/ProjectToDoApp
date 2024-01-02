@@ -43,10 +43,12 @@ fetch(url)
 .then(data => {
     console.log(data);
     todos = data
+    render(todos);
 })
 .catch(err=>console.log(err))
 
-}const basePath = 'http://localhost:3000'
-const todos = []; 
-getTodos(basePath + '/todos');
+}const todosURL = 'http://localhost:3000/todos'
+const todos = getTodos(todosURL); 
+// render(todos)
+
 
